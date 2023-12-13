@@ -1,0 +1,16 @@
+/* Method 2 - Font-face call it what you want, direct file import */
+@font-face {
+    font-family: 'Apple';
+    src: url('fonts/Roboto_Condensed/static/RobotoCondensed-Black.ttf') format('truetype')
+}
+
+
+p {
+    font-family: 'Apple';
+}
+
+/* Still have to specify the font weight you want and must have imported these */
+span {
+    font-family: 'Kalnia', serif;
+    font-weight: 200;
+}
