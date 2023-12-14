@@ -1,0 +1,264 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.90;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header, Logo, and Nav */
+header {
+    padding: 0 10px;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    border-bottom: 1px solid seashell;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    height: 50px;
+}
+
+.nav-container {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-item:hover {
+    opacity: 1;
+    color: black;
+    background-color: seashell;
+    border-radius: 3px;
+    transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+
+/* Mission section */
+.mission {
+    align-items: center;
+    justify-content: center;
+    padding: 350px 50px;
+    background-image: url("./images/background.png");
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text-container {
+    padding: 50px;
+    padding-top: 0;
+    border-radius: 5px;
+    height: 150px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.featured-tea {
+    padding: 60px 0;
+}
+
+.collage-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 100px;
+}
+
+.image-with-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px;
+}
+
+.image-with-text img {
+    width: 360px;
+    height: 240px;
+}
+
+/* Locations section */
+.locations {
+    background-image: url(./images/locations.png);
+    align-items: center;
+    padding: 60px 0;
+    margin-bottom: 0;
+    background-size: cover;
+    height: 800px;
+}
+
+.locations h2 {
+    background-color: transparent;
+    text-shadow: 1px 1px 1px white;
+    font-weight: 900;
+    opacity: 1;
+    font-size: 40px;
+    color: black;
+    padding-bottom: 40px;
+}
+
+.location-info-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: transparent;
+    padding-bottom: 80px;
+}
+
+.location-info-container h3, .location-info-container h4 {
+    background-color: transparent;
+    opacity: 1;
+}
+
+.location-info-container {
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 350px;
+    background-color: black;
+    opacity: 1;
+}
+
+.locations-button {
+    font-size: 16px;
+    font-weight: 600;
+    display: inline;
+    margin: 20px 50px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px 30px;
+    width: 350px;
+    text-transform: capitalize;
+    box-shadow: 1px 3px 1px black;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.95;
+}
+
+.locations-button:hover {
+    opacity: 1;
+    background-color: rgb(255, 213, 0);
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.1s ease-in, color 0.1s ease-in, text-decoration 0.1s ease-in;
+
+}
+
+.locations-button:active {
+    margin-top: 23px;
+    margin-left: 51px;
+    box-shadow: 0 0;
+}
+
+
+
+/* Footer */
+footer {
+    translate: 0 -50px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 200px;
+    margin-top: 100px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 30px;
+    padding-left: 40px;
+}
+
+.footer-list {
+    translate: 0 -20px;
+
+}
+
+.footer-column h2 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.footer-column p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer-column .footer-list {
+    display: block;
+    list-style: none;
+
+}
+
+.footer-column .footer-links {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-column .footer-links:hover {
+    opacity: 0.5;
+}
+
+
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 805px) {
+    header {
+        height: 100px;
+    }
+    .logo {
+        height: 20px;
+    }
+    .nav-item {
+        font-size: 16px;
+    }
+    .header-text-container {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .locations {
+        height: 1000px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .locations {
+        height: 1500px;
+    }
+}
