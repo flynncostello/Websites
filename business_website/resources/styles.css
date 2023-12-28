@@ -10,10 +10,19 @@ body {
     position: relative;
 }
 
+/* header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Updates bar at very top of screen */
 .updates-bar {
     width: 100%;
-    height: 50px;
+    height: 40px;
     background-image: radial-gradient(54.97% 272.54% at 40.36% -134.72%,rgba(47, 93, 220, 0.92) 0,rgba(0,0,0,.92) 100%);
     color: white;
     text-align: center;
@@ -28,15 +37,16 @@ body {
 }
 
 .updates-bar h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 .updates-bar a {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     text-decoration: underline;
     cursor: pointer;
+    color: white;
 }
 
 .updates-bar a:hover {
@@ -44,7 +54,7 @@ body {
 }
 
 .updates-bar a:active {
-    font-size: 14px;
+    font-size: 12px;
     transition: font-size 0.1s ease-in-out;
 }
 
@@ -53,30 +63,32 @@ body {
 }
 
 .updates-bar p {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 300;
 }
 
 /* Nav and accompanying image */
 
 .nav-container {
-    padding: 25px 40px;
-    max-width: 100%;
+    padding: 15px 0 15px 30px;
+    overflow: hidden;
     z-index: 10;
     position: sticky;
     top: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Center the navigation */
     align-items: center;
-    background-color: rgba(3,22,54, 0.9);
+    background-color: white;
+    border-bottom: 0.5px solid black;
 }
 
 
 .logo {
     width: 40px;
     height: auto;
-    margin-right: 50px;
+    margin-right: 60px;
 }
+
 
 nav ul {
     list-style: none;
@@ -85,11 +97,11 @@ nav ul {
     display: flex;
 }
 
-
 nav a {
     text-decoration: none;
-    color: white;
-    text-transform: uppercase;
+    color: black;
+    opacity: 0.9;
+    text-transform: capitalize;
     font-weight: 400;
     font-size: 18px;
     padding: 0px 25px;
@@ -97,7 +109,7 @@ nav a {
 }
 
 nav a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 nav a::after {
@@ -106,9 +118,9 @@ nav a::after {
     position: absolute;
     bottom: -5px;
     left: 22px;
-    width: calc(100% - 2.7rem);
+    width: calc(100% - 1.8rem);
     height: 1.5px; /* Adjust the thickness of the line */
-    background-color: white; /* Adjust the color of the line */
+    background-color: black; /* Adjust the color of the line */
     transform: scaleX(0); /* Zero scale, i.e., invisible */
     transform-origin: bottom right; /* Where it ends */
     transition: transform 0.3s ease-in-out;
@@ -118,6 +130,55 @@ nav a:hover::after {
     transform: scaleX(1); /* Full scale */
     transform-origin: bottom left;
 }
+
+.dropdown-arrow {
+    display: inline;
+    margin: 0 10px 0 -20px;
+    font-size: 16px;
+    cursor: pointer;
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Dropdown bar/info for nav elements */
+
+.drop-down {
+    position: absolute;
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    column-gap: 40px;
+    max-height: 400px;
+    background-color: white;
+    z-index: 8;
+    box-sizing: border-box;
+
+    padding: 4% 5% 6% 15%;
+    transition: background-color 1s ease-in-out;
+}
+
+
+
+.drop-down .drop-down-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.drop-down .drop-down-col a {
+    text-decoration: none;
+    color: rgb(0, 123, 255);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+.drop-down .drop-down-col a:hover {
+    text-decoration: underline;
+}
+
 
 
 /* Large main page image */
@@ -132,10 +193,9 @@ nav a:hover::after {
     color: white;
     background-image: url(./images/background.png);
     background-size: cover;
-    height: 680px;
+    height: 550px;
     width: 100%;
     z-index: 5;
-    transform: translateY(-94px);
     margin-bottom: -60px;
 }
 
@@ -160,14 +220,14 @@ nav a:hover::after {
     text-align: center;
     font-size: 40px;
     font-weight: 400;
-    background-color: rgba(13, 43, 95, 0.9);
-    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.9);
+    background-image: radial-gradient(54.97% 272.54% at 40.36% -14.72%,rgba(47, 93, 220, 0.92) 0,rgba(0,0,0,.92) 100%);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
     width: 70%;
     color: white;
-    padding: 10px;
+    padding: 5px 10px;
+    font-weight: 300;
     margin-left: -10px;
     margin-top: 90px;
-    border-radius: 10px;
 }
 
 .ai-news {
@@ -256,6 +316,8 @@ nav a:hover::after {
 .home-mid-image-text h3 {
     font-size: 20px;
     max-width: 200px;
+    font-weight: 400;
+    padding-top: 20px;
     grid-area: 1 / 5 / 2 / 6;
     margin-right: 80px;
     padding-right: 10px;
@@ -266,7 +328,7 @@ nav a:hover::after {
     max-width: 200px;
     grid-area: 2 / 5 / 3 / 6;   
     padding-right: 10px;
-
+    font-weight: 300;
 }
 
 .opportunities-button {
@@ -274,20 +336,19 @@ nav a:hover::after {
     grid-area: 3 / 5 / 4 / 6; 
     font-weight: 500;
     width: 200px;
-    margin-left: 15px;
-    margin-bottom: 40px;
+    margin: 0 30px 40px 15px;
     text-align: center;
     align-self: center;
     text-decoration: none;
     color: black;
     background-color: white;
     border: 1px solid white;
-    border-radius: 20px;
-    box-shadow: 2px 2px 3px grey;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
     cursor: pointer;
-    margin-right: 30px;
-
+    padding: 4px 0;
 }
+
 
 .opportunities-button:hover {
     background-color: rgba(13, 43, 95, 0.9);
@@ -348,13 +409,27 @@ footer {
 
 /* Media Queries */
 
+@media only screen and (max-width: 1100px) {
+    .drop-down .drop-down-col a {
+        font-size: 17px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .header-text h1 {
         font-size: 55px;
     }
 
-    .header-text h2 {
+    .header-text .drop-down-col h2 {
         font-size: 25px;
+    }
+
+    #insights-drop-down h2 {
+        font-size: 16px;
+    }
+
+    #insights-drop-down p {
+        font-size: 12px;
     }
 }
 
@@ -366,6 +441,14 @@ footer {
         font-size: 16px;
         padding: 0 15px;
     }
+    .dropdown-arrow {
+        margin-left: -10px;
+    }
+    nav a::after {
+        left: 15px;
+        width: calc(100% - 0.7rem);
+    }
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -379,8 +462,12 @@ footer {
         display: none;
     }
     nav a {
-        font-size: 16px;
+        font-size: 14px;
         padding: 0 15px;
+    }
+    .dropdown-arrow {
+        font-size: 12px;
+        margin-left: -15px;
     }
     .header-text h1 {
         font-size: 45px;
@@ -389,12 +476,20 @@ footer {
     .header-text h2 {
         font-size: 20px;
     }
+    nav a::after {
+        left: 15px;
+        width: calc(100% - 1.3rem);
+    }
+    .drop-down h2 {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
     .home-mid-image-text h3, .home-mid-image-text p, .home-mid-image-text .opportunities-button {
         display: none;
-    }
+    }    
+
     .header-text h1 {
         font-size: 30px;
     }
@@ -404,5 +499,9 @@ footer {
     }
     .ai-headings {
         font-size: 25px;
+    }
+
+    .drop-down .drop-down-col a {
+        font-size: 14px;
     }
 }

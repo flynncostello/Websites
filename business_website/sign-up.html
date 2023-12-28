@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="resources/images/robot.ico" type="image/x-icon">
+    <link href="resources/sign-up-styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Rapture AI - Updates Sign Up Form</title>
+</head>
+<body>
+    <main>
+        <a href="index.html" class="back-link">&larr; Return</a>
+        <div class="form-container">
+            <h1>Sign Up</h1>
+            <form action="sign-up-result.html" method="POST">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required>
+                <br>
+                <br>
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required>
+                <br>
+                <br>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required>
+                <br>
+                <br>
+                <label for="user-password">Password</label>
+                <input type="password" name="user-password" id="user-password" minlength="8" required>
+                <br>
+                <br>
+                <input type="submit" value="Sign Up" required>
+                <br>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="./js_files/sign-up-form.js" defer></script>
+
+</html>

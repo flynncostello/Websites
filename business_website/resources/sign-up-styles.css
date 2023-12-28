@@ -1,0 +1,133 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Source Sans 3', sans-serif;
+
+}
+
+body {
+    background-color: rgba(1, 17, 44, 0.9);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Back Arrow */
+
+.back-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    position: sticky;
+    top: 10px;
+    font-weight: 300;
+}
+
+.back-link:hover {
+    opacity: 0.6;
+}
+
+
+/* Form container */
+.form-container {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 65%;
+    margin: 2% auto;
+    border-radius: 2px;
+    padding: 30px 5px;
+    border: 1px solid black;
+}
+
+.form-container h1 {
+    margin-top: 5px;
+    font-size: 30px;
+    align-self: center;
+    font-weight: 400;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/* Form labels and inputs */
+
+form label {
+    z-index: 1;
+    font-size: 25px;
+    display: block;
+    align-self: baseline;
+    margin-left: 11%;
+    font-weight: 200;
+    opacity: 1;
+    transition: opacity 0.15s ease; /* Add transition effect for opacity */
+}
+
+form input[type="text"], form input[type="password"] {
+    z-index: 2;
+    background-color: transparent;
+    width: 80%;
+    display: block;
+    border: none; /* Remove border */
+    border-bottom: 2px solid black; /* Add bottom border */
+    outline: none; /* Remove outline */
+    font-size: 27px; /* Adjust font size */
+    font-weight: 300;
+    font-family: 'Source Sans 3', sans-serif;
+    margin: -40px 0 20px 15px;
+    transition: border-bottom-color 0.3s ease; /* Add transition effect */
+}
+
+form input[type="submit"] {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 25px 150px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    opacity: 0.6;
+}
+
+
+/* Media queries */
+
+@media (max-width: 700px) {
+    form input[type="submit"] {
+        padding: 20px 100px;
+        font-size: 16px;
+    }
+
+    form label {
+        font-size: 120%;
+    }
+
+    .form-container h1 {
+        font-size: 150%;
+    }
+
+    .back-link {
+        font-size: 90%;
+    }
+
+}

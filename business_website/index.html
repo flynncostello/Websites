@@ -11,13 +11,11 @@
   </head>
 
   <body id="body-section">
-    <header>
-      <div class="updates-bar">
-        <h2>Get Updates</h2>
-        <p>Be the first to know about new AI technologies and possible implementations within business</p>
-        <h3><a href="#">Sign Up</a></h3>
-      </div>
-    </header>
+    <div class="updates-bar">
+      <h2>Get Updates</h2>
+      <p>Be the first to know about new AI technologies and possible implementations within business</p>
+      <h3><a href="./sign-up.html">Sign Up</a></h3>
+    </div>
 
     <div class="nav-container" id="nav-section">
       <a href="index.html" class="logo-link">
@@ -25,22 +23,131 @@
       </a>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Insights</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li>
+            <a href="#" id="services-nav">Services</a>
+            <span class="dropdown-arrow" id="services-arrow">&#9662;</span>
+          </li>
+          <li>
+            <a href="#" id="insights-nav">Insights</a>
+            <span class="dropdown-arrow" id="insights-arrow">&#9662;</span>
+          </li>
+          <li>
+            <a href="#" id="industries-nav">Industries</a>
+            <span class="dropdown-arrow" id="industries-arrow">&#9662;</span>
+          </li>
+          <li>
+            <a href="#" id="about-us-nav">About Us</a>
+            <span class="dropdown-arrow" id="aboutUs-arrow">&#9662;</span>
+          </li>
+          <li>
+            <a href="#" id="contact-us-nav">Contact Us</a>
+            <span class="dropdown-arrow" id="contactUs-arrow">&#9662;</span>
+          </li>
         </ul>
       </nav>
     </div>
+    
+    <!-- All hidden (display: none;) until clicked upon -->
+    <div id="services-drop-down" class="drop-down">
+      <div class="drop-down-col">
+        <a href="#">Machine Learning</a>
+        <a href="#">Natural Language Processing</a>
+        <a href="#">Computer Vision</a>
+        <a href="#">Speech Recognition</a>
+      </div>
+      <div class="drop-down-col">
+        <a href="#">Machine Learning</a>
+        <a href="#">Natural Language Processing</a>
+        <a href="#">Computer Vision</a>
+        <a href="#">Speech Recognition</a>
+      </div>
+      <div class="drop-down-col">
+        <a href="#">Machine Learning</a>
+        <a href="#">Natural Language Processing</a>
+        <a href="#">Computer Vision</a>
+        <a href="#">Speech Recognition</a>
+      </div>
+    </div>
 
-    <div class="header-text">
-      <h1>Empower Your Business Today</h1>
-      <br>
-      <h2></h2>
-      <h2>Discover the Role of AI in Business</h2>
-      <h2></h2>
-    </div>    
+    <div id="insights-drop-down" class="drop-down">
+      <div class="drop-down-col">
+        <h2>Importance of Insights</h2>
+        <p>AI insights are indispensable, guiding decisions, tech innovation, ethics, industry competitiveness, and global impact. They shape regulations, manage risks, and foster interdisciplinary collaboration.</p>
+      </div>
+      <div class="drop-down-col">
+        <a href="#">Explainable AI (XAI)</a>
+        <a href="#">AI Ethics and Bias Mitigation</a>
+        <a href="#">Generative AI</a>
+        <a href="#">Reinforcement Learning Advances</a>
+      </div>
+      <div class="drop-down-col">
+        <a href="#">Edge AI</a>
+        <a href="#">Transfer Learning</a>
+        <a href="#">AI in Healthcare</a>
+        <a href="#">Advancements in Computer Vision</a>
+      </div>
+    </div>
+
+    <div id="industries-drop-down" class="drop-down">
+      <div class="drop-down-col">
+        <a href="#">Healthcare</a>
+        <a href="#">Financial Services</a>
+        <a href="#">Retail</a>
+        <a href="#">Transportation and Logistics</a>
+      </div>
+      <div class="drop-down-col">
+        <a href="#">Cybersecurity</a>
+        <a href="#">Education</a>
+        <a href="#">Agriculture</a>
+        <a href="#">Legal and Compliance</a>
+      </div>
+      <div class="drop-down-col">
+        <a href="#">Manufacturing</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Energy Management</a>
+        <a href="#">Human Resources</a>
+      </div>
+    </div>
+
+    <div id="about-us-drop-down" class="drop-down">
+      <div class="drop-down-col">
+        <h2>Who We Are</h2>
+        <a href="#">Machine Learning</a>
+        <a href="#">Natural Language Processing</a>
+        <a href="#">Computer Vision</a>
+      </div>
+      <div class="drop-down-col">
+        <h2>What We've Accomplished</h2>
+        <a href="#">Machine Learning</a>
+        <a href="#">Natural Language Processing</a>
+        <a href="#">Computer Vision</a>
+      </div>
+      <div class="drop-down-col">
+        <h2>Who We've Worked With</h2>
+        <a href="#">Machine Learning</a>
+        <a href="#">Natural Language Processing</a>
+        <a href="#">Computer Vision</a>
+      </div>
+    </div>
+
+    <div id="contact-us-drop-down" class="drop-down">
+      <div class="drop-down-col">
+        <a href="#">FAQ's</a>
+        <a href="#">Email</a>
+        <a href="#">Locations</a>
+        <a href="#">Phone</a>
+      </div>
+    </div>
+
+    <header>
+      <div class="header-text">
+        <h1>Empower Your Business Today</h1>
+        <br>
+        <h2></h2>
+        <h2>Discover the Role of AI in Business</h2>
+        <h2></h2>
+      </div>    
+    </header>
 
     <main>
       <h1 class="ai-headings">AI News</h1>
@@ -128,4 +235,7 @@
   </footer>
     
   </body>
+  <script src="./js_files/nav_hover.js" defer></script>
+
+  
 </html>
